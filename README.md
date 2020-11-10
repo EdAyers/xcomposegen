@@ -1,6 +1,10 @@
 Some code for generating `.XCompose` for linux.
 This is really just for personal use.
 
+See also:
+- https://github.com/rrthomas/pointless-xcompose/
+- https://github.com/kragen/xcompose
+
 # Usage
 
 - install [deno](https://deno.land)
