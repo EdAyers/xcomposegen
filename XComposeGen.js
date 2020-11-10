@@ -64,6 +64,6 @@ async function run() {
     await Deno.writeAll(Deno.stdout, encoder.encode(output));
 }
 
-
+run()
 
 // deno run XComposeGen.js > ~/.XCompose
