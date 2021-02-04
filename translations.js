@@ -149,14 +149,15 @@ const custom_translations = {
     "bk": "♚", "bq": "♛", "br": "♜", "bb": "♝", "bn": "♞", "bp": "♟",
 
     // just for fun
-    "eye": "👁",
-    "eyes":"👀",
-    "please love me": "👁👄👁",
-    "skull": "☠", "nuke": "☢", "biohaz": "☣",
+    "skull": "☠", "nuke": "☢", "biohaz": "☣", "warn": "⚠",
     "d1": "⚀", "d2": "⚁", "d3": "⚂", "d4": "⚃", "d5": "⚄", "d6": "⚅",
     "storm": "⛈", "rain": "⛆",
-    "warn": "⚠",
-    "benzene": "⌬"
+    "benzene": "⌬",
+    "eye": "👁",
+    "eyes":"👀",
+    "lips": "👄",
+    "bearmouth": "ᴥ",
+    "brow": "ಠ"
 }
 
 const alphabets = {
