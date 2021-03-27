@@ -6,11 +6,19 @@ This is really just for personal use but issues and contributions are welcome.
 
 I use Arch Linux's `gnome` package. I haven't tried anything else. Seems to work for both X and Wayland systems.
 
-- install [deno](https://deno.land)
-- `deno run XComposeGen.js > ~/.XCompose`
-- map compose key. Eg: `dconf write /org/gnome/desktop/input-sources/xkb-options "['compose:caps']"`
-- restart X or Wayland
-- Hit caps lock and start typing the keywords given in `translations.js` to insert those symbols
+## To generate the file
+
+You can directly download the given dotXCompose file in this repo. To make it yourself:
+
+- Install [deno](https://deno.land).
+- `deno run XComposeGen.js > ~/.XCompose`.
+
+## To use the file
+
+- Place the compose file at `~/.XCompose`.
+- Map compose key. Eg: `dconf write /org/gnome/desktop/input-sources/xkb-options "['compose:caps']"`.
+- Restart X or Wayland.
+- Hit caps lock and start typing the keywords given in `translations.js` to insert those symbols.
 
 # See also
 
