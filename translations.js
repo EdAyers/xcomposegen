@@ -83,6 +83,7 @@ const custom_translations = {
     "par": "∂", "i": "∫",
     "deg": "°",
     ".1": "ℹ",
+    "iou": "⩉",
 
     // operators
     ".": "∙", "o": "∘", "x": "×", "bx": "◾",
@@ -154,10 +155,98 @@ const custom_translations = {
     "storm": "⛈", "rain": "⛆",
     "benzene": "⌬",
     "eye": "👁",
-    "eyes":"👀",
+    "eyes": "👀",
     "lips": "👄",
     "bearmouth": "ᴥ",
-    "brow": "ಠ"
+    "thonk": "ಠ",
+    "hole": "🕳️", // (ಠ🕳️ಠ)
+}
+
+const abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')
+
+
+
+/** Here, I have a set of combining characters for decorating letters.
+ * Unfortunately, different fonts interpret these in different ways.
+ * For example, the overbar U+305 placed between two letters is sometimes drawn over the first letter, sometimes the second, and sometimes between the two.
+ * There does not seem to be a lot of agreement on this so I am going to do whatever looks best in PragmataPro.
+ *
+ * ```js
+ * // code for generating a list of these.
+ * let ranges = [[0x0300, 0x0370], [0x20D0, 0x20F1]]
+ * for (let [a,b] of ranges) for (let i = a; i < b; i++) console.log(`${i.toString(16)} - X${String.fromCharCode(i)}Z - x${String.fromCharCode(i)}z \n`)
+ * ```
+ */
+function mkCombine(r = {}) {
+    const over_combine = {
+        "'" : "x́",
+        "`": "x̀",
+        "hat": "x̂",
+        "~": "x̃",
+        "-": "\u0304x", // [note] some fonts will render this on preceeding char.
+        "cu": "x\u0306",
+        ".": "x\u0307",
+        "..": "x\u0308",
+        "...": "x\u20db",
+        "....": "x\u20dc",
+        "o": "x\u030a",
+        "v": "x\u030c",
+        "cd": "x\u0311",
+        "~~": "x\u034c",
+        "r": "x\u20d7",
+        "l": "x\u20d6",
+    }
+    const under_combine = {
+        ".": "x\u0323",
+        "..": "x\u0324",
+        "o": "x\u0325",
+        "~": "x\u0330",
+        "-": "x\u0331",
+        "r": "x\u20ef",
+        "l": "x\u20ee",
+    }
+    const pair_over_combine = {
+        "cu": "x\u035dy",
+        "-": "x\u035ey",
+        "~": "x\u0360y",
+        "cd": "x\u3610y",
+    }
+    const pair_under_combine = {
+        "u": "x\u035cy",
+        "r": "x\u0362y",
+        "-" : "x\u035fy",
+    }
+    const other_combine = {
+        "/":"x\u0338",
+        "//": "x\u20eb",
+        "|": "x\u20d2",
+        "||": "x\u20e6",
+    }
+    for (const k in over_combine) {
+        r[`#^${k}`] = over_combine[k].split("x").join("")
+    }
+    for (const k in under_combine) {
+        r[`#_${k}`] = under_combine[k].split("x").join("")
+    }
+    for (const k in pair_over_combine) {
+        r[`##^${k}`] = pair_over_combine[k].split("x").join("").split("y").join("")
+    }
+    for (const k in pair_under_combine) {
+        r[`##_${k}`] = pair_under_combine[k].split("x").join("").split("y").join("")
+    }
+    for (const k in other_combine) {
+        r[`#${k}`] = other_combine[k].split("x").join("")
+    }
+    for (const a of abc) {
+        for (const k in over_combine) {
+            r[`#${k}${a}`] = over_combine[k].split("x").join(a)
+        }
+        for (const k in under_combine) {
+            r[`${a}#${k}`] = under_combine[k].split("x").join(a)
+        }
+    }
+    return r
+    // [todo] does doing pairings make the XCompose file too big?
 }
 
 const alphabets = {
@@ -203,7 +292,9 @@ const arrow_map = {
     "u": "↑", "l": "←", "r": "→", "↓": "d",
 }
 
-const translations = { ...lts }
+const translations = {...lts}
+
+mkCombine(translations)
 
 for (const a in arrow_sets) {
     let out = "";
@@ -218,7 +309,7 @@ for (const a in arrow_sets) {
 }
 
 for (const a in alphabets) {
-    const abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')
+
     const ABC = alphabets[a].split(',')
     for (let i = 0; i < abc.length; i++) {
         translations[a + abc[i]] = ABC[i]
