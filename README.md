@@ -1,24 +1,16 @@
 Some code for generating `.XCompose` for linux.
-This is really just for personal use.
-
-See also:
-- https://github.com/rrthomas/pointless-xcompose/
-- https://github.com/kragen/xcompose
+This lets you insert unicode characters anywhere in the system by hitting the compose key (I map this to caps lock) and typing a code.
+This is really just for personal use but issues and contributions are welcome.
 
 # Usage
+
+I use Arch Linux's `gnome` package. I haven't tried anything else. Seems to work for both X and Wayland systems.
 
 - install [deno](https://deno.land)
 - `deno run XComposeGen.js > ~/.XCompose`
 - map compose key. Eg: `dconf write /org/gnome/desktop/input-sources/xkb-options "['compose:caps']"`
 - restart X or Wayland
-- hit caps lock and start typing the keywords given in `translations.js` to insert those symbols
-
-# Issues
-
-- XCompose doesn't let you insert multiple code points with one sequence in some apps.
-  So this means that inserting `⁻¹` is annoying.
-- [ ] add emoji
-- [ ] add abbreviations, eg "btam" ⟶ "be that as it may,"
+- Hit caps lock and start typing the keywords given in `translations.js` to insert those symbols
 
 # See also
 
