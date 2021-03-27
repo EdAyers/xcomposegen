@@ -157,7 +157,7 @@ const custom_translations = {
     "eye": "👁",
     "eyes": "👀",
     "lips": "👄",
-    "bearmouth": "ᴥ",
+    "bear": "ᴥ", // ⌃ᴥ⌃
     "thonk": "ಠ",
     "hole": "🕳️", // (ಠ🕳️ಠ)
 }
@@ -181,7 +181,7 @@ function mkCombine(r = {}) {
     const over_combine = {
         "'" : "x́",
         "`": "x̀",
-        "hat": "x̂",
+        "ld": "x̂",
         "~": "x̃",
         "-": "\u0304x", // [note] some fonts will render this on preceeding char.
         "cu": "x\u0306",
@@ -190,7 +190,7 @@ function mkCombine(r = {}) {
         "...": "x\u20db",
         "....": "x\u20dc",
         "o": "x\u030a",
-        "v": "x\u030c",
+        "lu": "x\u030c",
         "cd": "x\u0311",
         "~~": "x\u034c",
         "r": "x\u20d7",
@@ -212,7 +212,7 @@ function mkCombine(r = {}) {
         "cd": "x\u3610y",
     }
     const pair_under_combine = {
-        "u": "x\u035cy",
+        "cu": "x\u035cy",
         "r": "x\u0362y",
         "-" : "x\u035fy",
     }
