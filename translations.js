@@ -292,12 +292,15 @@ const arrow_map = {
     "u": "↑", "l": "←", "r": "→", "↓": "d",
 }
 
-const translations = {...lts}
+const translations = {}
+
+for (const k in lts) {
+    translations[k] = lts[k];
+}
 
 mkCombine(translations)
 
 for (const a in arrow_sets) {
-    let out = "";
     for (const x in arrow_sets[a]) {
         translations[a + x] = arrow_sets[a][x]
         let xx = x;
@@ -309,7 +312,6 @@ for (const a in arrow_sets) {
 }
 
 for (const a in alphabets) {
-
     const ABC = alphabets[a].split(',')
     for (let i = 0; i < abc.length; i++) {
         translations[a + abc[i]] = ABC[i]
