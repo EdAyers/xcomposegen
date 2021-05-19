@@ -134,6 +134,7 @@ const custom_translations = {
   inv: "⁻¹",
   "-1": "⁻¹",
   v: "⁻¹",
+  "-": "⁻¹",
   em: "∅",
 
   // brackets
@@ -233,6 +234,7 @@ const custom_translations = {
   i: "∫",
   deg: "°",
   ".1": "ℹ",
+  "im": "ℹ",
   iou: "⩉",
 
   // operators
