@@ -2137,7 +2137,7 @@
           "e" = ("insertText:","𝑒");
           "f" = ("insertText:","𝑓");
           "g" = ("insertText:","𝑔");
-          "h" = ("insertText:","𝑕");
+          "h" = ("insertText:","ℎ");
           "i" = ("insertText:","𝑖");
           "j" = ("insertText:","𝑗");
           "k" = ("insertText:","𝑘");
@@ -2291,17 +2291,17 @@
           "b" = ("insertText:","𝒷");
           "c" = ("insertText:","𝒸");
           "d" = ("insertText:","𝒹");
-          "e" = ("insertText:","𝒺");
+          "e" = ("insertText:","ℯ");
           "f" = ("insertText:","𝒻");
           "g" = ("insertText:","ℊ");
           "h" = ("insertText:","𝒽");
           "i" = ("insertText:","𝒾");
           "j" = ("insertText:","𝒿");
           "k" = ("insertText:","𝓀");
-          "l" = ("insertText:","𝓁");
+          "l" = ("insertText:","ℓ");
           "m" = ("insertText:","𝓂");
           "n" = ("insertText:","𝓃");
-          "o" = ("insertText:","𝓄");
+          "o" = ("insertText:","ℴ");
           "p" = ("insertText:","𝓅");
           "q" = ("insertText:","𝓆");
           "r" = ("insertText:","𝓇");
@@ -2314,23 +2314,23 @@
           "y" = ("insertText:","𝓎");
           "z" = ("insertText:","𝓏");
           "A" = ("insertText:","𝒜");
-          "B" = ("insertText:","𝒝");
+          "B" = ("insertText:","ℬ");
           "C" = ("insertText:","𝒞");
           "D" = ("insertText:","𝒟");
-          "E" = ("insertText:","𝒠");
-          "F" = ("insertText:","𝒡");
+          "E" = ("insertText:","ℰ");
+          "F" = ("insertText:","ℱ");
           "G" = ("insertText:","𝒢");
-          "H" = ("insertText:","𝒣");
-          "I" = ("insertText:","𝒤");
+          "H" = ("insertText:","ℋ");
+          "I" = ("insertText:","ℐ");
           "J" = ("insertText:","𝒥");
           "K" = ("insertText:","𝒦");
-          "L" = ("insertText:","𝒧");
-          "M" = ("insertText:","𝒨");
+          "L" = ("insertText:","ℒ");
+          "M" = ("insertText:","ℳ");
           "N" = ("insertText:","𝒩");
           "O" = ("insertText:","𝒪");
           "P" = ("insertText:","𝒫");
           "Q" = ("insertText:","𝒬");
-          "R" = ("insertText:","𝒭");
+          "R" = ("insertText:","ℛ");
           "S" = ("insertText:","𝒮");
           "T" = ("insertText:","𝒯");
           "U" = ("insertText:","𝒰");
@@ -2369,13 +2369,13 @@
           "z" = ("insertText:","𝔷");
           "A" = ("insertText:","𝔄");
           "B" = ("insertText:","𝔅");
-          "C" = ("insertText:","𝔆");
+          "C" = ("insertText:","ℭ");
           "D" = ("insertText:","𝔇");
           "E" = ("insertText:","𝔈");
           "F" = ("insertText:","𝔉");
           "G" = ("insertText:","𝔊");
-          "H" = ("insertText:","𝔋");
-          "I" = ("insertText:","𝔌");
+          "H" = ("insertText:","ℌ");
+          "I" = ("insertText:","ℑ");
           "J" = ("insertText:","𝔍");
           "K" = ("insertText:","𝔎");
           "L" = ("insertText:","𝔏");
@@ -2384,7 +2384,7 @@
           "O" = ("insertText:","𝔒");
           "P" = ("insertText:","𝔓");
           "Q" = ("insertText:","𝔔");
-          "R" = ("insertText:","𝔕");
+          "R" = ("insertText:","ℜ");
           "S" = ("insertText:","𝔖");
           "T" = ("insertText:","𝔗");
           "U" = ("insertText:","𝔘");
@@ -2392,7 +2392,7 @@
           "W" = ("insertText:","𝔚");
           "X" = ("insertText:","𝔛");
           "Y" = ("insertText:","𝔜");
-          "Z" = ("insertText:","𝔝");
+          "Z" = ("insertText:","ℨ");
         };
         "b" = {
           "a" = ("insertText:","𝕒");
@@ -5347,7 +5347,6 @@
           " " = ("insertText:","∨ ");
         };
         "[" = ("insertText:","⟨");
-        "]" = ("insertText:","⟩");
         " " = ("insertText:","← ");
       };
       "<" = {
@@ -9496,17 +9495,15 @@
       "[" = {
         "[" = ("insertText:","⟦");
         "-" = ("insertText:","⁅");
-        "]" = ("insertText:","⟦⟧");
-        " " = ("insertText:","⟦ ");
+        " " = ("insertText:","⟨ ");
       };
       "]" = {
         "]" = ("insertText:","⟧");
         ")" = ("insertText:","⟯");
-        " " = ("insertText:","⟧ ");
+        " " = ("insertText:","⟩ ");
       };
       "{" = {
         "{" = ("insertText:","⦃");
-        "}" = ("insertText:","⦃⦄");
         " " = ("insertText:","⦃ ");
       };
       "}" = {
