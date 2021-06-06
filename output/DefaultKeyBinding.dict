@@ -867,9 +867,16 @@
         };
         "C" = ("insertText:","Ç");
         "c" = {
-          "." = ("insertText:","⨀");
           "+" = ("insertText:","⨁");
           "x" = ("insertText:","⨂");
+          "." = ("insertText:","⨀");
+          "b" = {
+            "o" = {
+              "t" = ("insertText:","⦺");
+            };
+          };
+          "o" = ("insertText:","⧂");
+          "=" = ("insertText:","⧃");
           " " = ("insertText:","ç ");
         };
         "u" = {
@@ -1184,7 +1191,6 @@
               };
             };
           };
-          "u" = ("insertText:","⦹");
           " " = ("insertText:","ȩ ");
         };
         "r" = {
@@ -1296,6 +1302,9 @@
         };
         "b" = {
           "u" = ("insertText:","⦿");
+          "o" = {
+            "t" = ("insertText:","⦹");
+          };
         };
         "_" = ("insertText:","⍜");
         " " = ("insertText:","○ ");
