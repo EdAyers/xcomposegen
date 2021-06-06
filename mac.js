@@ -6,59 +6,69 @@ on macs to have composition characters.
 deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict
 ```
 */
-import translations from './translations.js'
+import translations from "./translations.js";
 
 const compose_map = {
-    "↑": "\\UF700", "↓": "\\UF701",
-    "→": "\\UF703", "←": "\\UF702",
-    // "~": "\\~", "^": "\\^", "#": "\\#", "$": "\\$", "@": "\\@",
-    "\\": "\\\\",
-    "\"": "\\\""
-}
+  "↑": "\\UF700",
+  "↓": "\\UF701",
+  "→": "\\UF703",
+  "←": "\\UF702",
+  "~": "\\~",
+  "^": "\\^",
+  "#": "\\#",
+  $: "\\$",
+  "@": "\\@",
+  "\\": "\\\\",
+  '"': '\\"',
+};
 
 function mapkey(x) {
-    for (const k in compose_map) {
-        x = x.split(k).join(compose_map[k])
-    }
-    return x;
+  for (const k in compose_map) {
+    x = x.split(k).join(compose_map[k]);
+  }
+  return x;
 }
 
-function mul(x,n) {
-    acc = ""
-    for (let i = 0; i < n; i++) {
-        acc += x
-    }
-    return acc
+function mul(x, n) {
+  acc = "";
+  for (let i = 0; i < n; i++) {
+    acc += x;
+  }
+  return acc;
 }
 
 async function run() {
-  const encoder = new TextEncoder('utf-8');
-  let o = {}
+  const encoder = new TextEncoder("utf-8");
+  let o = {};
   for (const k in translations) {
-      let cs = k.split("");
-      let v = translations[k]
-      let acc = o
-      for (const c of cs) {
-        if (!acc[c]) {acc[c] = {}}
-        acc = acc[c]
+    let cs = k.split("");
+    let v = translations[k];
+    let acc = o;
+    for (const c of cs) {
+      if (!acc[c]) {
+        acc[c] = {};
       }
-      acc.insert = v
+      acc = acc[c];
+    }
+    acc.insert = v;
   }
-  function f(acc, tabs="") {
-    let {insert, ...rest} = acc
-    let ks = Object.getOwnPropertyNames(rest)
+  function f(acc, tabs = "") {
+    let { insert, ...rest } = acc;
+    let ks = Object.getOwnPropertyNames(rest);
     if (ks.length === 0 && insert !== undefined) {
-        return `("insertText:","${insert}")`
+      return `("insertText:","${insert}")`;
     }
-    let es = ks.map(k => `${tabs}  "${mapkey(k)}" = ${f(rest[k], tabs + "  ")};`)
+    let es = ks.map(
+      (k) => `${tabs}  "${mapkey(k)}" = ${f(rest[k], tabs + "  ")};`
+    );
     if (insert !== undefined) {
-        es.push(`${tabs}  " " = ("insertText:","${insert} ");`)
+      es.push(`${tabs}  " " = ("insertText:","${insert} ");`);
     }
-    return `{\n${es.join("\n")}\n${tabs}}`
+    return `{\n${es.join("\n")}\n${tabs}}`;
   }
-  let main = f(o, "    ")
-  let output = `{\n  "\\UF710" = ${main};\n}`
-  await Deno.writeAll(Deno.stdout, encoder.encode(output))
+  let main = f(o, "    ");
+  let output = `{\n  "\\UF710" = ${main};\n}`;
+  await Deno.writeAll(Deno.stdout, encoder.encode(output));
 }
 
-run()
+run();
