@@ -67,6 +67,9 @@ async function run() {
     return `{\n${es.join("\n")}\n${tabs}}`;
   }
   let main = f(o, "    ");
+  // note; \\UF710 causes the 'compose key' to be triggered when F13 is pressed.
+  // you can see a list of other available keybindings at
+  // https://web.archive.org/web/20160314030051/http://osxnotes.net/keybindings.html
   let output = `{\n  "\\UF710" = ${main};\n}`;
   await Deno.writeAll(Deno.stdout, encoder.encode(output));
 }
