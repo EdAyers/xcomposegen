@@ -3009,7 +3009,7 @@
           "\\~" = ("insertText:","≉");
           " " = ("insertText:","≁ ");
         };
-        " " = ("insertText:","¬ ");
+        " " = ("insertText:","̸ ");
       };
       "o" = {
         "m" = {

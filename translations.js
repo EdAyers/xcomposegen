@@ -409,6 +409,7 @@ const custom_translations = {
   "^cu": "\u02d8",
   "^~": "\u02dc",
   "^.": "\u02d9",
+  "n": "\u0338",
 
   // subscripts
   // ₐ ₑ ₒ ₓ ₔ ₕ ₖ ₗ ₘ ₙ ₚ ₛ ₜ ₊ ₋ ₌ ₍ ₎
