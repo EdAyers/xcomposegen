@@ -5,7 +5,7 @@ import { translations as lean_translations } from "./lean-translations.js";
 
 const abc = "abcdefghijklmnopqrstuvwxyz".split("")
 const aA = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
-const cols = "abcdefghijklmnopqrstuvwxyz0123456!\"#$%&'*+,-_./:;<=>?@\\^|~()[]{}".split("")
+const cols = "abcdefghijklmnopqrstuvwxyz0123456!\"'*+,-_./:;<=>?@\\^|~()[]{}".split("")
 const rows = ["",...cols]
 const gopn = Object.getOwnPropertyNames(my_translations)
 const leankey = Object.getOwnPropertyNames(lean_translations).filter(k => my_translations[k] === undefined)
@@ -13,7 +13,7 @@ const leankey = Object.getOwnPropertyNames(lean_translations).filter(k => my_tra
 // rows.push()
 
 function C(props) {
-    return <code style={{fontFamily: "PragmataPro Liga"}} className={[props.className].join(" ")}>{props.children}</code>
+    return <code className={[props.className].join(" ")}>{props.children}</code>
 }
 
 function R({children:c}) {
