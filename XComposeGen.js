@@ -1,4 +1,4 @@
-import translations from "./translations.js";
+import {translations} from "./translations.js";
 /*
 https://github.com/rrthomas/pointless-xcompose/
 https://github.com/kragen/xcompose
@@ -51,8 +51,8 @@ for (const c of "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 async function run() {
   const encoder = new TextEncoder("utf-8");
   let output = `include "%L"\n`;
-  for (const k in translations) {
-    let v = translations[k];
+  for (const k in my_translations) {
+    let v = my_translations[k];
     let v2 = "<Multi_key> ";
     for (const c of k) {
       const s = compose_map[c];

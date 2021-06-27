@@ -45,3 +45,5 @@ The mac version behaves slightly differently to the linux version in that some o
 - A map from latex versions of the symbols to compose codes.
 - emoji
 - support for windows?
+- dump whole translations file as a json.
+- fix mkdoc.jsx

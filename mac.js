@@ -6,7 +6,7 @@ on macs to have composition characters.
 deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict
 ```
 */
-import translations from "./translations.js";
+import {translations} from "./translations.js";
 
 const compose_map = {
   "↑": "\\UF700",
@@ -40,9 +40,9 @@ function mul(x, n) {
 async function run() {
   const encoder = new TextEncoder("utf-8");
   let o = {};
-  for (const k in translations) {
+  for (const k in my_translations) {
     let cs = k.split("");
-    let v = translations[k];
+    let v = my_translations[k];
     let acc = o;
     for (const c of cs) {
       if (!acc[c]) {
