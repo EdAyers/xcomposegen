@@ -40,7 +40,7 @@ function T({rows, cols}) {
     return  <table style={{tableLayout: "fixed", width: `${(cols.length + 1) * 2}em`}}>
             <thead>
                 <tr className="bg-light-blue">
-                    <th>.</th>
+                    <th>{"\u2384"}</th>
                     {cols.map(c => <th key={c}><C>{c}</C></th>)}
                 </tr>
             </thead>
@@ -63,6 +63,8 @@ function Main() {
         <T cols={["mr", "mi", "mc", "mf", "mb", "bb", "^", "_"]} rows={aA}/>
         <T cols={[ ..."efghjkpxyz".split(""), "-", "=", "mt", "hp", "lt", "mo",]} rows={["l", "r", "d", "u","lr", "ud", "ul", "ur", "dr", "dl", "rr", "ll", "llrr", "mt"]}/>
         <T cols={[ ..."cilstv|".split("")]} rows={["l", "le","r", "re", "d", "u", "uu", "dd"]}/>
+        <T cols={["#'","#`","#ld", "#~", "#cu", "#.", "#..", "#o", "#lu", "#cd", "#~~", "#r", "#l"]} rows={abc}/>
+        <T rows={["#.", "#..", "#o", "#~", "#-", "#r", "#l"]} cols={abc}/>
     </body>
     </html>
 }

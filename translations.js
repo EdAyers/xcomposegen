@@ -2,9 +2,11 @@ import { translations as lts } from "./lean-translations.js";
 // const lts = {}
 
 const custom_translations = {
+  c: "○", ll: "≪", re: "▬", "-2": "⁻²","-3": "⁻³",
+  compose:"\u2384",
   // greek letters
   a: "α",
-  b: "β", c: "○", ll: "≪", re: "▬", "-2": "⁻²","-3": "⁻³",
+  b: "β",
   z: "ℤ",
   al: "α",
   be: "β",
