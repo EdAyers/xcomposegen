@@ -13,8 +13,17 @@
         "8" = ("insertText:","₁₈");
         "9" = ("insertText:","₁₉");
         "/" = {
+          "1" = {
+            "0" = ("insertText:","⅒");
+          };
           "2" = ("insertText:","½");
           "3" = ("insertText:","⅓");
+          "4" = ("insertText:","¼");
+          "5" = ("insertText:","⅕");
+          "6" = ("insertText:","⅙");
+          "7" = ("insertText:","⅐");
+          "8" = ("insertText:","⅛");
+          "9" = ("insertText:","⅑");
         };
         " " = ("insertText:","₁ ");
       };
@@ -29,11 +38,17 @@
         "7" = ("insertText:","₂₇");
         "8" = ("insertText:","₂₈");
         "9" = ("insertText:","₂₉");
+        "/" = {
+          "3" = ("insertText:","⅔");
+          "5" = ("insertText:","⅖");
+        };
         " " = ("insertText:","₂ ");
       };
       "3" = {
         "/" = {
           "4" = ("insertText:","¾");
+          "5" = ("insertText:","⅗");
+          "8" = ("insertText:","⅜");
         };
         "r" = {
           "t" = ("insertText:","∛");
@@ -41,14 +56,28 @@
         " " = ("insertText:","₃ ");
       };
       "4" = {
+        "/" = {
+          "5" = ("insertText:","⅘");
+        };
         "r" = {
           "t" = ("insertText:","∜");
         };
         " " = ("insertText:","₄ ");
       };
-      "5" = ("insertText:","₅");
+      "5" = {
+        "/" = {
+          "6" = ("insertText:","⅚");
+          "8" = ("insertText:","⅝");
+        };
+        " " = ("insertText:","₅ ");
+      };
       "6" = ("insertText:","₆");
-      "7" = ("insertText:","₇");
+      "7" = {
+        "/" = {
+          "8" = ("insertText:","⅞");
+        };
+        " " = ("insertText:","₇ ");
+      };
       "8" = {
         "<" = ("insertText:","✂");
         " " = ("insertText:","₈ ");
@@ -838,9 +867,16 @@
         };
         "C" = ("insertText:","Ç");
         "c" = {
-          "." = ("insertText:","⨀");
           "+" = ("insertText:","⨁");
           "x" = ("insertText:","⨂");
+          "." = ("insertText:","⨀");
+          "b" = {
+            "o" = {
+              "t" = ("insertText:","⦺");
+            };
+          };
+          "o" = ("insertText:","⧂");
+          "=" = ("insertText:","⧃");
           " " = ("insertText:","ç ");
         };
         "u" = {
@@ -1155,7 +1191,6 @@
               };
             };
           };
-          "u" = ("insertText:","⦹");
           " " = ("insertText:","ȩ ");
         };
         "r" = {
@@ -1267,6 +1302,9 @@
         };
         "b" = {
           "u" = ("insertText:","⦿");
+          "o" = {
+            "t" = ("insertText:","⦹");
+          };
         };
         "_" = ("insertText:","⍜");
         " " = ("insertText:","○ ");
@@ -2971,7 +3009,7 @@
           "\\~" = ("insertText:","≉");
           " " = ("insertText:","≁ ");
         };
-        " " = ("insertText:","¬ ");
+        " " = ("insertText:","̸ ");
       };
       "o" = {
         "m" = {
@@ -9422,6 +9460,13 @@
         "u" = {
           "a" = {
             "d" = ("insertText:"," ");
+            "r" = {
+              "t" = {
+                "e" = {
+                  "r" = ("insertText:","¼");
+                };
+              };
+            };
           };
           " " = ("insertText:","⍐ ");
         };
