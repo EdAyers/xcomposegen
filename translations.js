@@ -6,6 +6,7 @@ const custom_translations = {
   compose:"\u2384",
   // greek letters
   a: "α",
+  ae: "æ",
   b: "β",
   z: "ℤ",
   al: "α",
