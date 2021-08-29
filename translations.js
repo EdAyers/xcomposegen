@@ -97,7 +97,16 @@ const custom_translations = {
   bc: "∵",
   inv: "⁻¹",
   "-1": "⁻¹",
+  v: "⁻¹",
+  "-": "⁻¹",
   em: "∅",
+
+  "_ip1": "ᵢ₊₁",
+  "_np1": "ₙ₊₁",
+  "^ip1": "ⁱ⁺¹",
+  "^im1": "ⁱ⁻¹",
+  "^np1": "ⁿ⁺¹",
+  "^nm1": "ⁿ⁻¹",
 
   // brackets
   "<": "‹",
@@ -209,6 +218,7 @@ const custom_translations = {
   i: "∫",
   deg: "°",
   ".1": "ℹ",
+  "im": "ℹ",
   iou: "⩉",
 
   // operators
