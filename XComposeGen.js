@@ -1,4 +1,4 @@
-import {translations} from "./translations.js";
+import {translations as my_translations} from "./translations.js";
 /*
 https://github.com/rrthomas/pointless-xcompose/
 https://github.com/kragen/xcompose
