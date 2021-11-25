@@ -40,9 +40,9 @@ function mul(x, n) {
 async function run() {
   const encoder = new TextEncoder("utf-8");
   let o = {};
-  for (const k in my_translations) {
+  for (const k in translations) {
     let cs = k.split("");
-    let v = my_translations[k];
+    let v = translations[k];
     let acc = o;
     for (const c of cs) {
       if (!acc[c]) {
