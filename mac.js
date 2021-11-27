@@ -62,7 +62,7 @@ async function run() {
       (k) => `${tabs}  "${mapkey(k)}" = ${f(rest[k], tabs + "  ")};`
     );
     if (insert !== undefined) {
-      es.push(`${tabs}  " " = ("insertText:","${insert} ");`);
+      es.push(`${tabs}  " " = ("insertText:","${insert}");`);
     }
     return `{\n${es.join("\n")}\n${tabs}}`;
   }
