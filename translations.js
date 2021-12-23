@@ -475,6 +475,7 @@ const custom_translations = {
   skeptical : "🤨",
   hmmmm: "🧐",
   eyeroll: "🙄",
+  heart: "❤️",
 
   ",": "⟨",
 
