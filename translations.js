@@ -467,6 +467,14 @@ const custom_translations = {
   bear: "ᴥ", // ⌃ᴥ⌃
   thonk: "ಠ",
   hole: "🕳️", // (ಠ🕳️ಠ)
+  grimace: "😬",
+  moon: "🌝",
+  fire: "🔥",
+  "thumbu": "👍",
+  rofl : "🤣",
+  skeptical : "🤨",
+  hmmmm: "🧐",
+  eyeroll: "🙄",
 
   ",": "⟨",
 
