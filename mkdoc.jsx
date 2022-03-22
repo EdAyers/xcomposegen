@@ -65,7 +65,7 @@ function AllT() {
     const n = 4
     const all_keys = Object.getOwnPropertyNames(all_translations)
     const xss = Array(...reshape(all_keys, n))
-    return  <table style={{tableLayout: "fixed", width: `${(n+ 1) * 2}em`}}>
+    return  <table style={{tableLayout: "fixed",}}>
     <tbody>
         {xss.map((xs,i) => <tr key={i}>{xs.map((x,i) => <><th key={`x${i}`}><C>{x}</C></th><td key={`y${i}`}><C>{all_translations[x]}</C></td></>)}</tr>)}
     </tbody>
@@ -88,9 +88,6 @@ function Main() {
         <h2>Arrows and relations</h2>
         <T cols={[ ..."efghjkpxyz".split(""), "-", "=", "mt", "hp", "lt", "mo",]} rows={["l", "r", "d", "u","lr", "ud", "ul", "ur", "dr", "dl", "rr", "ll", "llrr", "mt"]}/>
         <T cols={[ ..."cilstv|".split("")]} rows={["l", "le","r", "re", "d", "u", "uu", "dd"]}/>
-        <h2>Accents</h2>
-        <T cols={["#'","#`","#ld", "#~", "#cu", "#.", "#..", "#o", "#lu", "#cd", "#~~", "#r", "#l"]} rows={abc}/>
-        <T rows={["#.", "#..", "#o", "#~", "#-", "#r", "#l"]} cols={abc}/>
         <h2>All translations</h2>
         <AllT/>
     </body>

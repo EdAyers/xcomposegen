@@ -2,8 +2,8 @@ import { translations as lts } from "./lean-translations.js";
 // const lts = {}
 
 const custom_translations = {
-  c: "○", ll: "≪", re: "▬", "-2": "⁻²","-3": "⁻³",
-  compose:"\u2384",
+  c: "○", ll: "≪", re: "▬", "-2": "⁻²", "-3": "⁻³",
+  compose: "\u2384",
   // greek letters
   a: "α",
   ae: "æ",
@@ -32,7 +32,7 @@ const custom_translations = {
   ps: "ψ",
   om: "ω",
   // Greek letters
-  g:"Γ", Ga: "Γ",
+  g: "Γ", Ga: "Γ",
   De: "Δ",
   Th: "Θ",
   La: "Λ",
@@ -63,7 +63,7 @@ const custom_translations = {
   nat: "ℕ",
   real: "ℝ",
   rat: "ℚ",
-  cplx: "ℂ",cp: "ℂ",
+  cplx: "ℂ", cp: "ℂ",
   exp: "𝔼",
   // fractions
   half: "½",
@@ -121,7 +121,7 @@ const custom_translations = {
   "{": "⦃",
   "}": "⦄",
 
-  "lc" : "⌈",
+  "lc": "⌈",
   "lf": "⌊",
   "rc": "⌉",
   "rf": "⌋",
@@ -130,13 +130,13 @@ const custom_translations = {
   from: "←",
   "=>": "⇒",
   inj: "↪",
-  mon: "↣",mo: "↣",
+  mon: "↣", mo: "↣",
   epi: "↠",
   Hom: "⟹",
   "~~>": "⟿",
   mt: "↦",
   lt: "↝",
-  rt: "√",ro: "√",
+  rt: "√", ro: "√",
   // ⇠ ⇡ ⇢ ⇣
   "-r-l": "⇄",
   "-u-d": "⇅",
@@ -174,8 +174,8 @@ const custom_translations = {
   "|le": "⫤",
   "|u": "⊥",
   "|d": "⊤",
-  "|dl": "⋋" ,
-  "|dr" : "⋌",
+  "|dl": "⋋",
+  "|dr": "⋌",
 
   in: "∈",
   inl: "∋",
@@ -222,12 +222,13 @@ const custom_translations = {
   iou: "⩉",
 
   // operators
-  ".": "∙",
-  o: "∘",
-  x: "×",
-  bx: "◾",
-  bu: "•",
-  st: "⋆",
+  "." : "·",  // U+00b7 Middle dot
+  "bullet": "∙", // U+2219 Mathematical symbols bullet operator
+  bu: "•", // U+2022 General punctuation bullet
+  o: "∘", // U+2218
+  x: "×", // U+00D7
+  bx: "◾", // U+25fe
+  st: "⋆", // U+22c6
   di: "⋄",
   dv: "÷",
   sec: "§",
@@ -235,7 +236,7 @@ const custom_translations = {
   opl: "⊕",
 
   c: "○",
-  "c+": "⊕","cc+": "⨁",
+  "c+": "⊕", "cc+": "⨁",
   "c-": "⊖",
   cx: "⊗", ccx: "⨂", // ⦻
   "c/": "⊘", // ⦱ ⦲ ⦳ ⦴
@@ -471,8 +472,8 @@ const custom_translations = {
   moon: "🌝",
   fire: "🔥",
   "thumbu": "👍",
-  rofl : "🤣",
-  skeptical : "🤨",
+  rofl: "🤣",
+  skeptical: "🤨",
   hmmmm: "🧐",
   eyeroll: "🙄",
   heart: "❤️",
@@ -490,24 +491,34 @@ const custom_translations = {
 
 const abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
+/** Creates a list of strings showing combining characters in action. */
+function combineTestStrings() {
+  let ranges = [[0x0300, 0x0370], [0x20D0, 0x20F1]]
+  let acc = []
+  for (let [a, b] of ranges) {
+    for (let i = a; i < b; i++) {
+      let c = String.fromCharCode(i)
+      acc.push (`${i.toString(16)} - X${c}Z - x${c}z\n`)
+    }
+  }
+  return acc
+}
+
 /** Here, I have a set of combining characters for decorating letters.
  * Unfortunately, different fonts interpret these in different ways.
  * For example, the overbar U+305 placed between two letters is sometimes drawn over the first letter, sometimes the second, and sometimes between the two.
  * There does not seem to be a lot of agreement on this so I am going to do whatever looks best in PragmataPro.
- *
- * ```js
- * // code for generating a list of these.
- * let ranges = [[0x0300, 0x0370], [0x20D0, 0x20F1]]
- * for (let [a,b] of ranges) for (let i = a; i < b; i++) console.log(`${i.toString(16)} - X${String.fromCharCode(i)}Z - x${String.fromCharCode(i)}z \n`)
- * ```
+ * `combineTestStrings()` makes a list of test strings for looking at these characters.
  */
 function mkCombine(r = {}) {
-  const over_combine = {
+  const combine = {
+    // above letter
     "'": "x́",
     "`": "x̀",
+    hat: "x̂",
     ld: "x̂",
     "~": "x̃",
-    "-": "\u0304x", // [note] some fonts will render this on preceeding char.
+    "-": "x\u0304",
     cu: "x\u0306",
     ".": "x\u0307",
     "..": "x\u0308",
@@ -519,15 +530,14 @@ function mkCombine(r = {}) {
     "~~": "x\u034c",
     r: "x\u20d7",
     l: "x\u20d6",
-  };
-  const under_combine = {
-    ".": "x\u0323",
-    "..": "x\u0324",
-    o: "x\u0325",
-    "~": "x\u0330",
-    "-": "x\u0331",
-    r: "x\u20ef",
-    l: "x\u20ee",
+    // below letter
+    "_.": "x\u0323",
+    "_..": "x\u0324",
+    "_o": "x\u0325",
+    "_~": "x\u0330",
+    "_": "x\u0331",
+    "_r": "x\u20ef",
+    "_l": "x\u20ee",
   };
   const pair_over_combine = {
     cu: "x\u035dy",
@@ -546,12 +556,15 @@ function mkCombine(r = {}) {
     "|": "x\u20d2",
     "||": "x\u20e6",
   };
-  for (const k in over_combine) {
-    r[`#^${k}`] = over_combine[k].split("x").join("");
+  for (const k in combine) {
+    r[`${k}`] = combine[k].split("x").join("");
   }
-  for (const k in under_combine) {
-    r[`#_${k}`] = under_combine[k].split("x").join("");
+  for (const a of abc) {
+    for (const k in combine) {
+      r[`${a}${k}`] = combine[k].split("x").join(a);
+    }
   }
+
   for (const k in pair_over_combine) {
     r[`##^${k}`] = pair_over_combine[k].split("x").join("").split("y").join("");
   }
@@ -564,14 +577,6 @@ function mkCombine(r = {}) {
   }
   for (const k in other_combine) {
     r[`#${k}`] = other_combine[k].split("x").join("");
-  }
-  for (const a of abc) {
-    for (const k in over_combine) {
-      r[`#${k}${a}`] = over_combine[k].split("x").join(a);
-    }
-    for (const k in under_combine) {
-      r[`${a}#${k}`] = under_combine[k].split("x").join(a);
-    }
   }
   return r;
   // [todo] does doing pairings make the XCompose file too big?
@@ -587,9 +592,10 @@ export const alphabets = {
 };
 
 export const arrow_sets = {
-  "": { r: "→", l: "←", u: "↑", d: "↓", lr: "↔", ud: "↕", rr: "⟶",
-  // ll: "⟵"
-},
+  "": {
+    r: "→", l: "←", u: "↑", d: "↓", lr: "↔", ud: "↕", rr: "⟶",
+    // ll: "⟵"
+  },
   "-": {
     r: "→",
     l: "←",
@@ -610,7 +616,8 @@ export const arrow_sets = {
   l: {
     // r: "<",
     // l: ">",
-     re: "≤", le: "≥", u: "∨", d: "∧", uu: "⋁", dd: "⋀" },
+    re: "≤", le: "≥", u: "∨", d: "∧", uu: "⋁", dd: "⋀"
+  },
   s: {
     r: "⊏",
     l: "⊐",
@@ -660,7 +667,7 @@ export const arrow_sets = {
     r: "⇒",
     d: "⇓",
     lr: "⇔",
-    le:"⇚", "re":  "⇛",
+    le: "⇚", "re": "⇛",
     ud: "⇕",
     ul: "⇖",
     ur: "⇗",
@@ -677,17 +684,17 @@ export const arrow_sets = {
     r: "⇏",
   },
   e: { l: "↞", r: "↠", u: "↟", d: "↡" },
-  hp: { l: "↩", r: "↪", d: "↷", "ul": "⤣", "ur": "⤤", "dr": "⤥", "dl": "⤦"},
+  hp: { l: "↩", r: "↪", d: "↷", "ul": "⤣", "ur": "⤤", "dr": "⤥", "dl": "⤦" },
   lt: { r: "↝", l: "↜" },
   mo: { l: "↢", r: "↣" },
   f: { l: "⥢", r: "⥤", u: "⥣", d: "⥥" },
   "z": { r: "⇝", l: "⇜", lr: "↭", d: "↯", rr: "⟿" },
-  p: { l: "⇦", u: "⇧", r: "⇨", d: "⇩", mt: "⇰", ud: "⇳"},
-  g: { u:"⇈", d:"⇊", l:"⇇", r:"⇉", rr: "⇶"},
-  j: { u:"⇅", d:"⇵", l:"⇆", r:"⇄"},
-  k: { u:"⇡", d:"⇣", l:"⇠", r:"⇢"},
-  x: { u:"⤧",  "r":"⤨", d: "⤩", l: "⤪"},
-  y: { r:"⥼" ,l:"⥽" , d:"⥾" , u:"⥿"},
+  p: { l: "⇦", u: "⇧", r: "⇨", d: "⇩", mt: "⇰", ud: "⇳" },
+  g: { u: "⇈", d: "⇊", l: "⇇", r: "⇉", rr: "⇶" },
+  j: { u: "⇅", d: "⇵", l: "⇆", r: "⇄" },
+  k: { u: "⇡", d: "⇣", l: "⇠", r: "⇢" },
+  x: { u: "⤧", "r": "⤨", d: "⤩", l: "⤪" },
+  y: { r: "⥼", l: "⥽", d: "⥾", u: "⥿" },
 };
 
 const arrow_map = {
@@ -724,4 +731,4 @@ for (const k in custom_translations) {
   my_translations[k] = custom_translations[k];
 }
 
-export const translations = {...lts, ...my_translations}
+export const translations = { ...lts, ...my_translations }
