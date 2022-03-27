@@ -70,7 +70,13 @@ async function run() {
   // note; \\UF710 causes the 'compose key' to be triggered when F13 is pressed.
   // you can see a list of other available keybindings at
   // https://web.archive.org/web/20160314030051/http://osxnotes.net/keybindings.html
-  let output = `{\n  "\\UF710" = ${main};\n}`;
+  let output = `{
+    "\UF729"  = moveToBeginningOfLine:; // home
+    "\UF72B"  = moveToEndOfLine:; // end
+    "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
+    "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
+    "\\UF710" = ${main};
+  }`;
   await Deno.writeAll(Deno.stdout, encoder.encode(output));
 }
 
