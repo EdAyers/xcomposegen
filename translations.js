@@ -476,6 +476,7 @@ const custom_translations = {
   Eyebrow: "🤨",
   Hmm: "🧐",
   Eyeroll: "🙄",
+  Puzzle: "🧩",
   Robot: "🤖", Brain: "🧠", Heart: "❤️",
   Cow: "🐮", Chicken: "🐔", Pig: "🐷",
 
