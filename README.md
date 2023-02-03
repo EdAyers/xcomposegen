@@ -24,7 +24,7 @@ You can directly download the given dotXCompose file in this repo. To make it yo
 
 1. Install [Karabiner](https://karabiner-elements.pqrs.org/)
 2. Let Karabiner have full control of your computer
-3. In the Karabiner app, add a rule mapping caps lock to F13.
+3. In the Karabiner app, add a rule mapping caps lock to F13. Go to "Simple Modifications", click "For all devices", "Add item", modifier-keys/caps-lock to  function-keys/F13.
 4. `deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict`
 
 Another way that doesn't require Karabiner is to use a keyboard with an F13 key.
