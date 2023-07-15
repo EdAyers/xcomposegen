@@ -222,7 +222,7 @@ const custom_translations = {
   iou: "⩉",
 
   // operators
-  "." : "·",  // U+00b7 Middle dot
+  ".": "·",  // U+00b7 Middle dot
   "bullet": "∙", // U+2219 Mathematical symbols bullet operator
   bu: "•", // U+2022 General punctuation bullet
   o: "∘", // U+2218
@@ -500,7 +500,7 @@ function combineTestStrings() {
   for (let [a, b] of ranges) {
     for (let i = a; i < b; i++) {
       let c = String.fromCharCode(i)
-      acc.push (`${i.toString(16)} - X${c}Z - x${c}z\n`)
+      acc.push(`${i.toString(16)} - X${c}Z - x${c}z\n`)
     }
   }
   return acc
@@ -618,13 +618,16 @@ export const arrow_sets = {
   l: {
     // r: "<",
     // l: ">",
-    re: "≤", le: "≥", u: "∨", d: "∧", uu: "⋁", dd: "⋀"
+    re: "≤", le: "≥", u: "∨", d: "∧", uu: "⋁", dd: "⋀",
+    rn: "≮", ln: "≯", rne: '≰', lne: '≱',
   },
   s: {
     r: "⊏",
     l: "⊐",
     re: "⊑",
+    rne: '⋢',
     le: "⊒",
+    lne: '⋣',
     u: "⊔",
     d: "⊓",
     uu: "⨆",
@@ -645,9 +648,9 @@ export const arrow_sets = {
     uu: "⋃",
     dd: "⋂",
     nr: "⊄",
-    nr: "⊅",
-    nre: "⊈",
-    nle: "⊉",
+    nl: "⊅",
+    rne: "⊈",
+    lne: "⊉",
   },
   h: {
     l: "↼",
@@ -669,7 +672,8 @@ export const arrow_sets = {
     r: "⇒",
     d: "⇓",
     lr: "⇔",
-    le: "⇚", "re": "⇛",
+    le: "⇚",
+    re: "⇛",
     ud: "⇕",
     ul: "⇖",
     ur: "⇗",
