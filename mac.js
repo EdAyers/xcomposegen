@@ -6,7 +6,12 @@ on macs to have composition characters.
 deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict
 ```
 */
-import {translations} from "./translations.js";
+import { translations } from "./translations.js";
+
+// If this is true, we skip any translation that involves an arrow key.
+const SKIP_ARROW_TRANSLATIONS = true;
+
+const arrows = ["↑", "↓", "→", "←"];
 
 const compose_map = {
   "↑": "\\UF700",
@@ -58,9 +63,15 @@ async function run() {
     if (ks.length === 0 && insert !== undefined) {
       return `("insertText:","${insert}")`;
     }
-    let es = ks.map(
-      (k) => `${tabs}  "${mapkey(k)}" = ${f(rest[k], tabs + "  ")};`
-    );
+    function* g(ks) {
+      for (const k of ks) {
+        if (SKIP_ARROW_TRANSLATIONS && arrows.includes(k)) {
+          continue;
+        }
+        yield `${tabs}  "${mapkey(k)}" = ${f(rest[k], tabs + "  ")};`
+      }
+    }
+    let es = [...g(ks)];
     if (insert !== undefined) {
       es.push(`${tabs}  " " = ("insertText:","${insert}");`);
     }
