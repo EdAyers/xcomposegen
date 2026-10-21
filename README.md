@@ -32,13 +32,13 @@ No third-party software is needed. macOS ships with `hidutil`, which can remap c
    - Permanently, using the LaunchAgent in this repo, which re-applies the mapping at every login:
      ```sh
      cp com.xcomposegen.capslock-f13.plist ~/Library/LaunchAgents/
-     launchctl load ~/Library/LaunchAgents/com.xcomposegen.capslock-f13.plist
+     launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.xcomposegen.capslock-f13.plist
      ```
 2. `node mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict`
 3. Restart any open apps so they pick up the new key bindings.
 
 To undo the remapping run `hidutil property --set '{"UserKeyMapping":[]}'`, and for the permanent version also run
-`launchctl unload ~/Library/LaunchAgents/com.xcomposegen.capslock-f13.plist` and delete the plist.
+`launchctl bootout gui/$(id -u)/com.xcomposegen.capslock-f13` and delete the plist.
 
 If you'd rather not remap caps lock, you can use a keyboard with an F13 key instead.
 You can change to use a different key than F13 by changing the `"\UF710"` entry, see `mac.js`.
