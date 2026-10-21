@@ -22,14 +22,27 @@ You can directly download the given dotXCompose file in this repo. To make it yo
 
 # Usage Macs
 
-1. Install [Karabiner](https://karabiner-elements.pqrs.org/)
-2. Let Karabiner have full control of your computer
-3. In the Karabiner app, add a rule mapping caps lock to F13. Go to "Simple Modifications", click "For all devices", "Add item", modifier-keys/caps-lock to  function-keys/F13.
-4. `deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict`
+No third-party software is needed. macOS ships with `hidutil`, which can remap caps lock to F13.
 
-Another way that doesn't require Karabiner is to use a keyboard with an F13 key.
+1. Remap caps lock to F13 using one of:
+   - Just for now (resets on reboot):
+     ```sh
+     hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000068}]}'
+     ```
+   - Permanently, using the LaunchAgent in this repo, which re-applies the mapping at every login:
+     ```sh
+     cp com.xcomposegen.capslock-f13.plist ~/Library/LaunchAgents/
+     launchctl load ~/Library/LaunchAgents/com.xcomposegen.capslock-f13.plist
+     ```
+2. `deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict`
+3. Restart any open apps so they pick up the new key bindings.
+
+To undo the remapping run `hidutil property --set '{"UserKeyMapping":[]}'`, and for the permanent version also run
+`launchctl unload ~/Library/LaunchAgents/com.xcomposegen.capslock-f13.plist` and delete the plist.
+
+If you'd rather not remap caps lock, you can use a keyboard with an F13 key instead.
 You can change to use a different key than F13 by changing the `"\UF710"` entry, see `mac.js`.
-The mac version behaves slightly differently to the linux version in that some of the codes need to be terminated with spaces, for example `==`  to make `≡` needs to be terminated with a space because there is another superstring code `===` which inserts `≣`.
+The mac version behaves slightly differently to the linux version in that some of the codes need to be terminated with spaces, for example `==` to make `≡` needs to be terminated with a space because there is another superstring code `===` which inserts `≣`.
 
 # See also
 
