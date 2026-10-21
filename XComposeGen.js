@@ -49,7 +49,7 @@ for (const c of "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 }
 
 async function run() {
-  const encoder = new TextEncoder("utf-8");
+
   let output = `include "%L"\n`;
   for (const k in my_translations) {
     let v = my_translations[k];
@@ -64,9 +64,9 @@ async function run() {
     v2 += `: "${v}"\n`;
     output += v2;
   }
-  await Deno.writeAll(Deno.stdout, encoder.encode(output));
+  process.stdout.write(output);
 }
 
 run();
 
-// deno run XComposeGen.js > ~/.XCompose
+// node XComposeGen.js > ~/.XCompose

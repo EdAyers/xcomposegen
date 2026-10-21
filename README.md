@@ -10,8 +10,8 @@ I use Arch Linux's `gnome` package. I haven't tried anything else. Seems to work
 
 You can directly download the given dotXCompose file in this repo. To make it yourself:
 
-- Install [deno](https://deno.land).
-- `deno run XComposeGen.js > ~/.XCompose`.
+- Install [Node.js](https://nodejs.org).
+- `node XComposeGen.js > ~/.XCompose`.
 
 ## To use the file
 
@@ -34,7 +34,7 @@ No third-party software is needed. macOS ships with `hidutil`, which can remap c
      cp com.xcomposegen.capslock-f13.plist ~/Library/LaunchAgents/
      launchctl load ~/Library/LaunchAgents/com.xcomposegen.capslock-f13.plist
      ```
-2. `deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict`
+2. `node mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict`
 3. Restart any open apps so they pick up the new key bindings.
 
 To undo the remapping run `hidutil property --set '{"UserKeyMapping":[]}'`, and for the permanent version also run
@@ -59,7 +59,7 @@ The mac version behaves slightly differently to the linux version in that some o
 - emoji
 - support for windows?
 - dump whole translations file as a json.
-- fix mkdoc.jsx: should automatically update the below tables.
+- fix mkdoc.jsx: should automatically update the below tables. (Run it with `npm install && npx tsx mkdoc.jsx > x.html`.)
 
 # Tables
 

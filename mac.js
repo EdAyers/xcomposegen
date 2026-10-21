@@ -3,7 +3,7 @@ When this file is run it will output a file that can be used
 on macs to have composition characters.
 
 ```
-deno run mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict
+node mac.js > ~/Library/KeyBindings/DefaultKeyBinding.dict
 ```
 */
 import { translations } from "./translations.js";
@@ -43,7 +43,7 @@ function mul(x, n) {
 }
 
 async function run() {
-  const encoder = new TextEncoder("utf-8");
+
   let o = {};
   for (const k in translations) {
     let cs = k.split("");
@@ -88,7 +88,7 @@ async function run() {
     "$\\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
     "\\UF710" = ${main};
   }`;
-  await Deno.writeAll(Deno.stdout, encoder.encode(output));
+  process.stdout.write(output);
 }
 
 run();

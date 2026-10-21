@@ -1,6 +1,6 @@
 import {alphabets, arrow_sets, my_translations, translations as all_translations} from './translations.js'
-import S from 'https://dev.jspm.io/react-dom/server';
-import React from 'https://dev.jspm.io/react';
+import { renderToString } from 'react-dom/server';
+import React from 'react';
 import { translations as lean_translations } from "./lean-translations.js";
 
 const abc = "abcdefghijklmnopqrstuvwxyz".split("")
@@ -67,7 +67,7 @@ function AllT() {
     const xss = Array(...reshape(all_keys, n))
     return  <table style={{tableLayout: "fixed",}}>
     <tbody>
-        {xss.map((xs,i) => <tr key={i}>{xs.map((x,i) => <><th key={`x${i}`}><C>{x}</C></th><td key={`y${i}`}><C>{all_translations[x]}</C></td></>)}</tr>)}
+        {xss.map((xs,i) => <tr key={i}>{xs.map((x,i) => <React.Fragment key={i}><th><C>{x}</C></th><td><C>{all_translations[x]}</C></td></React.Fragment>)}</tr>)}
     </tbody>
 </table>
 }
@@ -95,9 +95,7 @@ function Main() {
 }
 
 async function run() {
-    const encoder = new TextEncoder("utf-8");
-    let output = S.renderToString(<Main/>)
-    await Deno.writeAll(Deno.stdout, encoder.encode(output));
+    process.stdout.write(renderToString(<Main/>))
 }
 
 run();

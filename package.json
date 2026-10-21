@@ -1,0 +1,18 @@
+{
+  "name": "xcomposegen",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "xcompose": "node XComposeGen.js",
+    "mac": "node mac.js",
+    "mkdoc": "tsx mkdoc.jsx"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}
