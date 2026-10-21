@@ -1348,33 +1348,9 @@
           "l" = ("insertText:","c⃮");
           " " = ("insertText:","⍜");
         };
-        "\\UF703" = {
-          "e" = ("insertText:","⊆");
-          "n" = {
-            "e" = ("insertText:","⊈");
-          };
-          " " = ("insertText:","⊂");
-        };
-        "\\UF702" = {
-          "e" = ("insertText:","⊇");
-          "n" = {
-            "e" = ("insertText:","⊉");
-          };
-          " " = ("insertText:","⊃");
-        };
-        "\\UF700" = {
-          "\\UF700" = ("insertText:","⋃");
-          " " = ("insertText:","∪");
-        };
-        "\\UF701" = {
-          "\\UF701" = ("insertText:","⋂");
-          " " = ("insertText:","∩");
-        };
         "n" = {
           "r" = ("insertText:","⊄");
-          "\\UF703" = ("insertText:","⊄");
           "l" = ("insertText:","⊅");
-          "\\UF702" = ("insertText:","⊅");
         };
         "p" = {
           "l" = {
@@ -1891,11 +1867,7 @@
           "l" = ("insertText:","e⃮");
           " " = ("insertText:","e̱");
         };
-        "\\UF702" = ("insertText:","↞");
-        "\\UF703" = ("insertText:","↠");
-        "\\UF700" = ("insertText:","↟");
         "d" = ("insertText:","↡");
-        "\\UF701" = ("insertText:","↡");
         " " = ("insertText:","ε");
       };
       "g" = {
@@ -2105,14 +2077,7 @@
           "l" = ("insertText:","g⃮");
           " " = ("insertText:","g̱");
         };
-        "\\UF700" = ("insertText:","⇈");
         "d" = ("insertText:","⇊");
-        "\\UF701" = ("insertText:","⇊");
-        "\\UF702" = ("insertText:","⇇");
-        "\\UF703" = {
-          "\\UF703" = ("insertText:","⇶");
-          " " = ("insertText:","⇉");
-        };
         " " = ("insertText:","Γ");
       };
       "i" = {
@@ -2440,9 +2405,7 @@
             };
           };
           "l" = ("insertText:","↢");
-          "\\UF702" = ("insertText:","↢");
           "r" = ("insertText:","↣");
-          "\\UF703" = ("insertText:","↣");
           "n" = ("insertText:","↣");
           " " = ("insertText:","↣");
         };
@@ -2594,22 +2557,12 @@
             "r" = ("insertText:","⟼");
             " " = ("insertText:","↦");
           };
-          "\\UF703" = {
-            "\\UF703" = ("insertText:","⟼");
-            " " = ("insertText:","↦");
-          };
           "l" = {
             "l" = ("insertText:","⟻");
             " " = ("insertText:","↤");
           };
-          "\\UF702" = {
-            "\\UF702" = ("insertText:","⟻");
-            " " = ("insertText:","↤");
-          };
           "u" = ("insertText:","↥");
-          "\\UF700" = ("insertText:","↥");
           "d" = ("insertText:","↧");
-          "\\UF701" = ("insertText:","↧");
           " " = ("insertText:","↦");
         };
         "f" = {
@@ -3256,12 +3209,7 @@
             "r" = ("insertText:","⇎");
             " " = ("insertText:","⇍");
           };
-          "\\UF702" = {
-            "\\UF703" = ("insertText:","⇎");
-            " " = ("insertText:","⇍");
-          };
           "r" = ("insertText:","⇏");
-          "\\UF703" = ("insertText:","⇏");
         };
         " " = ("insertText:","∇");
       };
@@ -3685,18 +3633,11 @@
           "l" = ("insertText:","p⃮");
           " " = ("insertText:","p̱");
         };
-        "\\UF702" = ("insertText:","⇦");
         "u" = {
           "d" = ("insertText:","⇳");
           " " = ("insertText:","⇧");
         };
-        "\\UF700" = {
-          "\\UF701" = ("insertText:","⇳");
-          " " = ("insertText:","⇧");
-        };
-        "\\UF703" = ("insertText:","⇨");
         "d" = ("insertText:","⇩");
-        "\\UF701" = ("insertText:","⇩");
         " " = ("insertText:","Π");
       };
       "t" = {
@@ -5097,11 +5038,7 @@
           " " = ("insertText:","x̱");
         };
         "u" = ("insertText:","⤧");
-        "\\UF700" = ("insertText:","⤧");
-        "\\UF703" = ("insertText:","⤨");
         "d" = ("insertText:","⤩");
-        "\\UF701" = ("insertText:","⤩");
-        "\\UF702" = ("insertText:","⤪");
         " " = ("insertText:","×");
       };
       "-" = {
@@ -5134,10 +5071,6 @@
           };
           " " = ("insertText:","→");
         };
-        "\\UF703" = {
-          "\\UF703" = ("insertText:","⟶");
-          " " = ("insertText:","→");
-        };
         "l" = {
           "r" = ("insertText:","↔");
           "l" = {
@@ -5152,16 +5085,6 @@
           };
           " " = ("insertText:","←");
         };
-        "\\UF702" = {
-          "\\UF703" = ("insertText:","↔");
-          "\\UF702" = {
-            "\\UF703" = {
-              "\\UF703" = ("insertText:","⟷");
-            };
-            " " = ("insertText:","⟵");
-          };
-          " " = ("insertText:","←");
-        };
         "u" = {
           "d" = ("insertText:","↕");
           "l" = ("insertText:","↖︎");
@@ -5172,23 +5095,12 @@
           };
           " " = ("insertText:","↑");
         };
-        "\\UF700" = {
-          "\\UF701" = ("insertText:","↕");
-          "\\UF702" = ("insertText:","↖︎");
-          "\\UF703" = ("insertText:","↗");
-          " " = ("insertText:","↑");
-        };
         "d" = {
           "r" = ("insertText:","↘︎");
           "l" = ("insertText:","↙");
           "-" = {
             "d" = ("insertText:","⇊");
           };
-          " " = ("insertText:","↓");
-        };
-        "\\UF701" = {
-          "\\UF703" = ("insertText:","↘︎");
-          "\\UF702" = ("insertText:","↙");
           " " = ("insertText:","↓");
         };
         "," = ("insertText:","⍪");
@@ -5821,9 +5733,7 @@
             };
           };
           "r" = ("insertText:","↝");
-          "\\UF703" = ("insertText:","↝");
           "l" = ("insertText:","↜");
-          "\\UF702" = ("insertText:","↜");
           " " = ("insertText:","↝");
         };
         "v" = {
@@ -5863,28 +5773,6 @@
           "r" = ("insertText:","l⃯");
           "l" = ("insertText:","l⃮");
           " " = ("insertText:","ḻ");
-        };
-        "\\UF703" = {
-          "e" = ("insertText:","≤");
-          "n" = {
-            "e" = ("insertText:","≰");
-            " " = ("insertText:","≮");
-          };
-        };
-        "\\UF702" = {
-          "e" = ("insertText:","≥");
-          "n" = {
-            "e" = ("insertText:","≱");
-            " " = ("insertText:","≯");
-          };
-        };
-        "\\UF700" = {
-          "\\UF700" = ("insertText:","⋁");
-          " " = ("insertText:","∨");
-        };
-        "\\UF701" = {
-          "\\UF701" = ("insertText:","⋀");
-          " " = ("insertText:","∧");
         };
         " " = ("insertText:","←");
       };
@@ -7542,16 +7430,7 @@
           "l" = ("insertText:","z⃮");
           " " = ("insertText:","ẕ");
         };
-        "\\UF703" = {
-          "\\UF703" = ("insertText:","⟿");
-          " " = ("insertText:","⇝");
-        };
-        "\\UF702" = {
-          "\\UF703" = ("insertText:","↭");
-          " " = ("insertText:","⇜");
-        };
         "d" = ("insertText:","↯");
-        "\\UF701" = ("insertText:","↯");
         " " = ("insertText:","ℤ");
       };
       "k" = {
@@ -7632,11 +7511,7 @@
           " " = ("insertText:","ḵ");
         };
         "u" = ("insertText:","⇡");
-        "\\UF700" = ("insertText:","⇡");
         "d" = ("insertText:","⇣");
-        "\\UF701" = ("insertText:","⇣");
-        "\\UF702" = ("insertText:","⇠");
-        "\\UF703" = ("insertText:","⇢");
       };
       "s" = {
         "i" = {
@@ -8192,37 +8067,10 @@
           "l" = ("insertText:","s⃮");
           " " = ("insertText:","s̱");
         };
-        "\\UF703" = {
-          "e" = ("insertText:","⊑");
-          "n" = {
-            "e" = ("insertText:","⋢");
-          };
-          "\\UF701" = ("insertText:","↴");
-          " " = ("insertText:","⊏");
-        };
-        "\\UF702" = {
-          "e" = ("insertText:","⊒");
-          "n" = {
-            "e" = ("insertText:","⋣");
-          };
-          " " = ("insertText:","⊐");
-        };
-        "\\UF700" = {
-          "\\UF700" = ("insertText:","⨆");
-          "\\UF702" = ("insertText:","↰");
-          "\\UF703" = ("insertText:","↱");
-          " " = ("insertText:","⊔");
-        };
         "d" = {
           "d" = ("insertText:","⨅");
           "l" = ("insertText:","↲");
           "r" = ("insertText:","↳");
-          " " = ("insertText:","⊓");
-        };
-        "\\UF701" = {
-          "\\UF701" = ("insertText:","⨅");
-          "\\UF702" = ("insertText:","↲");
-          "\\UF703" = ("insertText:","↳");
           " " = ("insertText:","⊓");
         };
         "+" = ("insertText:","⊞");
@@ -9099,27 +8947,10 @@
           };
           " " = ("insertText:","⇐");
         };
-        "\\UF702" = {
-          "\\UF703" = ("insertText:","⇔");
-          "e" = ("insertText:","⇚");
-          "\\UF702" = {
-            "\\UF703" = {
-              "\\UF703" = ("insertText:","⟺");
-            };
-            " " = ("insertText:","⟸");
-          };
-          " " = ("insertText:","⇐");
-        };
         "u" = {
           "d" = ("insertText:","⇕");
           "l" = ("insertText:","⇖");
           "r" = ("insertText:","⇗");
-          " " = ("insertText:","⇑");
-        };
-        "\\UF700" = {
-          "\\UF701" = ("insertText:","⇕");
-          "\\UF702" = ("insertText:","⇖");
-          "\\UF703" = ("insertText:","⇗");
           " " = ("insertText:","⇑");
         };
         "r" = {
@@ -9127,25 +8958,14 @@
           "r" = ("insertText:","⟹");
           " " = ("insertText:","⇒");
         };
-        "\\UF703" = {
-          "e" = ("insertText:","⇛");
-          "\\UF703" = ("insertText:","⟹");
-          " " = ("insertText:","⇒");
-        };
         "d" = {
           "r" = ("insertText:","⇘");
           "l" = ("insertText:","⇙");
           " " = ("insertText:","⇓");
         };
-        "\\UF701" = {
-          "\\UF703" = ("insertText:","⇘");
-          "\\UF702" = ("insertText:","⇙");
-          " " = ("insertText:","⇓");
-        };
         "m" = {
           "t" = {
             "l" = ("insertText:","⤆");
-            "\\UF702" = ("insertText:","⤆");
             " " = ("insertText:","⤇");
           };
         };
@@ -9299,24 +9119,9 @@
           "l" = ("insertText:","h⃮");
           " " = ("insertText:","ẖ");
         };
-        "\\UF702" = {
-          "\\UF700" = ("insertText:","↼");
-          "\\UF701" = ("insertText:","↽");
-          " " = ("insertText:","↼");
-        };
-        "\\UF703" = {
-          "\\UF700" = ("insertText:","⇀");
-          "\\UF701" = ("insertText:","⇁");
-          " " = ("insertText:","⇀");
-        };
         "u" = {
           "r" = ("insertText:","↾");
           "l" = ("insertText:","↿");
-          " " = ("insertText:","↾");
-        };
-        "\\UF700" = {
-          "\\UF703" = ("insertText:","↾");
-          "\\UF702" = ("insertText:","↿");
           " " = ("insertText:","↾");
         };
         "d" = {
@@ -9324,33 +9129,17 @@
           "l" = ("insertText:","⇃");
           " " = ("insertText:","⇂");
         };
-        "\\UF701" = {
-          "\\UF703" = ("insertText:","⇂");
-          "\\UF702" = ("insertText:","⇃");
-          " " = ("insertText:","⇂");
-        };
         "p" = {
           "l" = ("insertText:","↩");
-          "\\UF702" = ("insertText:","↩");
           "r" = ("insertText:","↪");
-          "\\UF703" = ("insertText:","↪");
           "d" = {
             "r" = ("insertText:","⤥");
             "l" = ("insertText:","⤦");
             " " = ("insertText:","↷");
           };
-          "\\UF701" = {
-            "\\UF703" = ("insertText:","⤥");
-            "\\UF702" = ("insertText:","⤦");
-            " " = ("insertText:","↷");
-          };
           "u" = {
             "l" = ("insertText:","⤣");
             "r" = ("insertText:","⤤");
-          };
-          "\\UF700" = {
-            "\\UF702" = ("insertText:","⤣");
-            "\\UF703" = ("insertText:","⤤");
           };
         };
       };
@@ -9546,11 +9335,7 @@
           "l" = ("insertText:","f⃮");
           " " = ("insertText:","f̱");
         };
-        "\\UF702" = ("insertText:","⥢");
-        "\\UF703" = ("insertText:","⥤");
-        "\\UF700" = ("insertText:","⥣");
         "d" = ("insertText:","⥥");
-        "\\UF701" = ("insertText:","⥥");
       };
       "T" = {
         "r" = ("insertText:","T⃗");
@@ -10134,11 +9919,7 @@
           " " = ("insertText:","j̱");
         };
         "u" = ("insertText:","⇅");
-        "\\UF700" = ("insertText:","⇅");
         "d" = ("insertText:","⇵");
-        "\\UF701" = ("insertText:","⇵");
-        "\\UF702" = ("insertText:","⇆");
-        "\\UF703" = ("insertText:","⇄");
       };
       ")" = {
         "b" = ("insertText:","⟆");
@@ -10312,12 +10093,8 @@
           "l" = ("insertText:","y⃮");
           " " = ("insertText:","y̱");
         };
-        "\\UF703" = ("insertText:","⥼");
-        "\\UF702" = ("insertText:","⥽");
         "d" = ("insertText:","⥾");
-        "\\UF701" = ("insertText:","⥾");
         "u" = ("insertText:","⥿");
-        "\\UF700" = ("insertText:","⥿");
       };
       "w" = {
         "a" = {
@@ -10729,19 +10506,6 @@
         };
         " " = ("insertText:","𝒲");
       };
-      "\\UF703" = {
-        "\\UF703" = ("insertText:","⟶");
-        " " = ("insertText:","→");
-      };
-      "\\UF702" = {
-        "\\UF703" = ("insertText:","↔");
-        " " = ("insertText:","←");
-      };
-      "\\UF700" = {
-        "\\UF701" = ("insertText:","↕");
-        " " = ("insertText:","↑");
-      };
-      "\\UF701" = ("insertText:","↓");
       ";" = {
         "_" = ("insertText:","⍮");
       };
